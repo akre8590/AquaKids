@@ -1,0 +1,57 @@
+<form #alumnoForm="ngForm" (ngSubmit)="onSubmit(alumnoForm)">
+  <input type="hidden" name="$key" #$key="ngModel" [(ngModel)]="alumnoService.selectedAlumno.$key">
+
+<div class="form-row">
+
+  <div class="col-md-5 mb-3">
+  <div class="form-group">
+    <label>Nombre del alumno</label>
+    <input class="form-control" name="nombre" #nombre="ngModel" [(ngModel)]="alumnoService.selectedAlumno.nombre" placeholder="Nombre Completo" pattern="[A-Za-z\s]+" required>
+  </div>
+  </div>
+  <div class="col-md-2 mb-3">
+  <div class="form-group">
+    <label>Fecha de nacimiento</label>
+    <input class="form-control" name="fecha" #fecha="ngModel" [(ngModel)]="alumnoService.selectedAlumno.fecha" placeholder="DD-MM-AAAA" required  pattern="(0[1-9]|1[0-9]|2[0-9]|3[01])-(0[1-9]|1[012])-[0-9]{4}">
+  </div>
+  </div>
+  <div class="col-md-5 mb-3">
+  <div class="form-group">
+    <label>Nombre de tutor</label>
+    <input class="form-control" name="nombre_tutor" #nombre_tutor="ngModel" [(ngModel)]="alumnoService.selectedAlumno.nombre_tutor" placeholder="Nombre de tutor" pattern="[A-Za-z\s]+" required>
+  </div>
+  </div>
+  <div class="col-md-7 mb-3">
+  <div class="form-group">
+  <label>Dirección</label>
+    <input class="form-control" name="direccion" #direccion="ngModel" [(ngModel)]="alumnoService.selectedAlumno.direccion" placeholder="Calle y número, Colonia, Ciudad, Estado" required>
+  </div>
+  </div>
+  <div class="col-md-2 mb-3">
+  <div class="form-group">
+  <label>Teléfono</label>
+    <input class="form-control" name="tel_tutor" #tel_tutor="ngModel" [(ngModel)]="alumnoService.selectedAlumno.tel_tutor" placeholder="Teléfono" maxlength="15" pattern="\d*" required>
+  </div>
+  </div>
+  <div class="col-md-3 mb-3">
+  <div class="form-group">
+    <label>Correo</label>
+    <input type="email" class="form-control" name="correo" #correo="ngModel" [(ngModel)]="alumnoService.selectedAlumno.correo" placeholder="nombre@example.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
+  </div>
+  </div>
+
+    <div class="col-sm-12"></div>
+    <div class="col-sm"></div>
+    <div class="col-sm-3"></div>
+
+  <div class="form-group">
+    <button class="btn btn-default" type="submit" [disabled]="!alumnoForm.valid">
+      <i class="fa fa-floppy-o"></i>
+      Submit</button>
+    <button class="btn btn-default" type="button" (click)="resetForm(alumnoForm)">
+      <i class="fa fa-repeat"></i>
+      Reset</button>
+  </div>
+
+</div>
+</form>

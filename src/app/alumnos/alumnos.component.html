@@ -1,0 +1,9 @@
+<div class="text-center">
+  <h1 class="jumbotron animated fadeIn fast">Control de Alumnos</h1>
+</div>
+
+    <app-alumno *ngIf="isAdmin"></app-alumno>
+
+   <app-alumno-lista *ngIf="isAdmin"></app-alumno-lista>
+
+    <app-alumno-search *ngIf="!isAdmin"></app-alumno-search>

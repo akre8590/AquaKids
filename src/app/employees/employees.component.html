@@ -1,0 +1,9 @@
+<div class="text-center">
+  <h1 class="jumbotron animated fadeIn fast">Gestión de Instructores</h1>
+</div>
+
+        <app-employee *ngIf="isAdmin"></app-employee>
+
+        <app-employee-list *ngIf="isAdmin"></app-employee-list>
+
+        <app-employee-search *ngIf="!isAdmin"></app-employee-search>

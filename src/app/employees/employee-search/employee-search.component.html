@@ -1,0 +1,21 @@
+<h3>Busqueda de Instructor</h3>
+<div class="form-row">
+    <div class="col-md-5 mb-3">
+<input type="text" #searchInput (keyup)="search(searchInput.value)" placeholder="Buscar instructor..." class="form-control">
+    </div>
+</div>
+
+<div *ngFor="let employee of employees$ | async">
+    <h5>{{employee.name}}</h5>
+
+    <p>
+     <b>Dirección:</b> {{employee.address}} <br>
+        <b>Teléfono:</b> {{ employee.tel }}
+    </p>
+</div>
+<div *ngIf="(employees$ | async)?.length < 1">
+    <hr>
+    <p>
+        No se encontraron resultados...
+    </p>
+</div>

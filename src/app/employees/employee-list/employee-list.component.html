@@ -1,0 +1,36 @@
+<hr>
+<div class="form-row">
+    <h3 class="col-md-4">Busqueda de Instructor</h3>
+    <div class="col-md-4 mb-3">
+        <input type="text" #searchInput (keyup)="search(searchInput.value)" placeholder="Buscar instructor..." class="form-control">
+    </div>
+</div>
+
+<div class="row">
+
+    <div class="col-md"><h6>Nombre</h6></div>
+<div class="col-md-5"><h6>Dirección</h6></div>
+    <div class="col-md"><h6>Teléfono</h6></div>
+</div>
+<br/>
+<table class="table table-sm table-hover">
+  <tr *ngFor="let employee of employees$ | async; index as i">
+      <td>{{ i + 1 }}. {{employee.name}}</td>
+      <td>{{employee.address}}</td>
+      <td>{{employee.tel}}</td>
+      <td  *ngFor="let employee of employeeList">
+        <a class="btn" (click)="onEdit(employee)">
+          <i class="fa fa-pencil-square-o"></i>
+        </a>
+        <a class="btn" (click)="onDelete(employee.$key)">
+          <i class="fa fa-trash-o"></i>
+        </a>
+      </td>
+  </tr>
+    <div *ngIf="(employees$ | async)?.length < 1">
+        <hr>
+        <p>
+            No se encontraron resultados...
+        </p>
+    </div>
+</table>
