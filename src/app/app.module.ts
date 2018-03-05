@@ -33,6 +33,7 @@ import { LoginComponent } from './login/login.component';
 import { LoginGuard } from './shared/guard/login.guard';
 import {NoLoginGuard} from './shared/guard/no-login.guard';
 import { RegisterComponent } from './register/register.component';
+import { GruposComponent } from './grupos/grupos.component';
 
 
 @NgModule({
@@ -49,7 +50,8 @@ import { RegisterComponent } from './register/register.component';
     EmployeeSearchComponent,
     AlumnoSearchComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    GruposComponent
   ],
   imports: [
     BrowserModule,

@@ -4,6 +4,7 @@ import { EmployeesComponent } from './employees/employees.component';
 import { AlumnosComponent } from './alumnos/alumnos.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
+import { GruposComponent } from './grupos/grupos.component';
 //guard
 import {LoginGuard} from './shared/guard/login.guard';
 import {NoLoginGuard} from './shared/guard/no-login.guard';
@@ -15,6 +16,7 @@ const APP_ROUTES: Routes = [
     { path: 'alumnos', component: AlumnosComponent, canActivate: [LoginGuard]},
     { path: 'registro', component: RegisterComponent, canActivate: [LoginGuard]},
     { path: 'login', component: LoginComponent},
+    { path: 'grupos', component: GruposComponent, canActivate: [LoginGuard]},
     { path: '**', pathMatch: 'full', redirectTo: 'login'}
 ];
 
