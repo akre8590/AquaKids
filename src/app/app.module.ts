@@ -34,6 +34,8 @@ import { LoginGuard } from './shared/guard/login.guard';
 import {NoLoginGuard} from './shared/guard/no-login.guard';
 import { RegisterComponent } from './register/register.component';
 import { GruposComponent } from './grupos/grupos.component';
+import { GrupoComponent } from './grupos/grupo/grupo.component';
+import { GruposListComponent } from './grupos/grupos-list/grupos-list.component';
 
 
 @NgModule({
@@ -51,7 +53,9 @@ import { GruposComponent } from './grupos/grupos.component';
     AlumnoSearchComponent,
     LoginComponent,
     RegisterComponent,
-    GruposComponent
+    GruposComponent,
+    GrupoComponent,
+    GruposListComponent
   ],
   imports: [
     BrowserModule,
