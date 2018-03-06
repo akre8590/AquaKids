@@ -1,31 +1,36 @@
-<form #employeeForm="ngForm" (ngSubmit)="onSubmit(employeeForm)">
-  <input type="hidden" name="$key" #$key="ngModel" [(ngModel)]="employeeService.selectedEmployee.$key">
+<form #grupoForm="ngForm" (ngSubmit)="onSubmit(grupoForm)">
+  <input type="hidden" name="$key" #$key="ngModel" [(ngModel)]="grupoService.selectedGrupo.$key">
   <div class="form-group">
-    <label>Name</label>
-    <input class="form-control" name="name" #name="ngModel" [(ngModel)]="employeeService.selectedEmployee.name" placeholder="Full Name" required>
+    <label>Tipo de Grupo</label>
+    <input class="form-control" name="tipo_grupo" #tipo_grupo="ngModel" [(ngModel)]="grupoService.selectedGrupo.tipo_grupo" placeholder="Tipo de Grupo" required>
   </div>
   <div class="form-group">
-    <label>Position</label>
-    <input class="form-control" name="position" #position="ngModel" [(ngModel)]="employeeService.selectedEmployee.position" placeholder="Position">
+    <label>Horario</label>
+    <input class="form-control" name="horario" #horario="ngModel" [(ngModel)]="grupoService.selectedGrupo.horario" placeholder="Horario">
   </div>
   <div class="form-group">
-    <label>Office</label>
-    <input class="form-control" name="office" #office="ngModel" [(ngModel)]="employeeService.selectedEmployee.office" placeholder="Office">
+    <label>Alumnos</label>
+    <input class="form-control" name="alumnos_grupo" #alumnos_grupo="ngModel" [(ngModel)]="grupoService.selectedGrupo.alumnos_grupo" placeholder="Alumnos">
   </div>
   <div class="form-group">
-    <label>Salary</label>
+    <label>Costo</label>
     <div class="input-group">
       <div class="input-group-addon">
         <i class="fa fa-dollar"></i>
       </div>
-      <input class="form-control" name="salary" #salary="ngModel" [(ngModel)]="employeeService.selectedEmployee.salary" placeholder="Salary">
+      <input class="form-control" name="costo" #costo="ngModel" [(ngModel)]="grupoService.selectedGrupo.costo" placeholder="Costo">
     </div>
   </div>
   <div class="form-group">
-    <button class="btn btn-default" type="submit" [disabled]="!employeeForm.valid">
+    <label>Cupo</label>
+    <input class="form-control" name="cupo" #cupo="ngModel" [(ngModel)]="grupoService.selectedGrupo.cupo" placeholder="Cupo">
+  </div>
+
+  <div class="form-group">
+    <button class="btn btn-default" type="submit" [disabled]="!grupoForm.valid">
       <i class="fa fa-floppy-o"></i>
       Submit</button>
-    <button class="btn btn-default" type="button" (click)="resetForm(employeeForm)">
+    <button class="btn btn-default" type="button" (click)="resetForm(grupoForm)">
       <i class="fa fa-repeat"></i>
       Reset</button>
   </div>

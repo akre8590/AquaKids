@@ -3,4 +3,6 @@ export class Grupo {
     tipo_grupo: string;
     horario: string;
     alumnos_grupo: string;
+    costo: string;
+    cupo: string;
 }

@@ -17,7 +17,9 @@ export class GrupoService {
         this.grupoList.push({
           tipo_grupo: grupo.tipo_grupo,
             horario: grupo.horario,
-            alumnos_grupo: grupo.alumnos_grupo
+            alumnos_grupo: grupo.alumnos_grupo,
+            costo: grupo.costo,
+            cupo: grupo.cupo
         });
     }
 
@@ -26,7 +28,9 @@ export class GrupoService {
             {
                 tipo_grupo: grupo.tipo_grupo,
                 horario: grupo.horario,
-                alumnos_grupo: grupo.alumnos_grupo
+                alumnos_grupo: grupo.alumnos_grupo,
+                costo: grupo.costo,
+                cupo: grupo.cupo
             });
     }
 

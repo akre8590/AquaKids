@@ -1,3 +1,16 @@
-<p>
-  grupos-list works!
-</p>
+<h6 class="text-center">Registro de grupos</h6><br/>
+<table class="table table-sm table-hover">
+  <tr *ngFor="let grupo of grupoList">
+    <td>{{grupo.tipo_grupo}}</td>
+    <td>{{grupo.horario}}</td>
+    <td>{{grupo.costo}}</td>
+    <td>
+      <a class="btn" (click)="onEdit(grupo)">
+        <i class="fa fa-pencil-square-o"></i>
+      </a>
+      <a class="btn" (click)="onDelete(grupo.$key)">
+        <i class="fa fa-trash-o"></i>
+      </a>
+    </td>
+  </tr>
+</table>
