@@ -1,5 +1,5 @@
 <form #employeeForm="ngForm" (ngSubmit)="onSubmit(employeeForm)">
-    <input type="hidden" name="$key" #$key="ngModel" [(ngModel)]="employeeService.selectedEmployee.$key">
+    <input type="hidden" name="$key" #$key="ngModel" [(ngModel)]="employeeService.selectedEmployee.key">
   <div class="form-row">
     <div class="col-md-5 mb-3">
   <div class="form-group">
