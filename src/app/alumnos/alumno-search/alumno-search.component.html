@@ -4,16 +4,24 @@
     <input type="text" #searchInput (keyup)="search(searchInput.value)" placeholder="Buscar instructor..." class="form-control">
   </div>
 </div>
-
-<div *ngFor="let alumno of alumno$ | async">
-  <h5>{{alumno.nombre}}</h5>
-  <p>
-   <b> Dirección:</b> {{alumno.direccion}} <br>
-    <b> Fecha de nacimiento:</b> {{alumno.fecha}}
-    <b>Nombre del tutor:</b> {{alumno.nombre_tutor}} <br>
-    <b>Teléfono del tutor</b> {{ alumno.tel_tutor }}
-  </p>
+<br>
+<div class="row">
+    <div class="col-md-3"><h6>Nombre</h6></div>
+    <div class="col-md-2"><h6>Tutor</h6></div>
+    <div class="col-md-2"><h6>Teléfono</h6></div>
+    <div class="col-md"><h6>Dirección</h6></div>
 </div>
+<br>
+<table class="table table-sm table-hover">
+    <tr *ngFor="let alumno of alumno$ | async">
+        <td>{{alumno.nombre}}</td>
+        <td>{{alumno.nombre_tutor}}</td>
+        <td>{{alumno.tel_tutor}}</td>
+        <td>{{alumno.direccion}}</td>
+
+    </tr>
+</table>
+
 <div *ngIf="(alumno$ | async)?.length < 1">
   <hr>
   <p>
