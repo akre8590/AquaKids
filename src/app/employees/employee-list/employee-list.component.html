@@ -1,8 +1,8 @@
 <hr>
 <div class="form-row">
-    <h3 class="col-md-4">Busqueda de Instructor</h3>
+    <h3 class="col-md-4">Busqueda de Alumnos</h3>
     <div class="col-md-4 mb-3">
-        <input type="text" #searchInput (keyup)="search(searchInput.value)" placeholder="Buscar instructor..." class="form-control">
+        <input type="text" #searchInput (keyup)="search(searchInput.value)" placeholder="Buscar alumno..." class="form-control">
     </div>
 </div>
 
@@ -18,7 +18,7 @@
       <td>{{ i + 1 }}. {{employee.name}}</td>
       <td>{{employee.address}}</td>
       <td>{{employee.tel}}</td>
-      <!--<td  *ngFor="let employee of employeeList">-->
+
       <td>
         <a class="btn" (click)="onEdit(employee)">
           <i class="fa fa-pencil-square-o"></i>

@@ -35,7 +35,7 @@ export class EmployeeListComponent implements OnInit {
   }
 
   onDelete(key: string) {
-    if (confirm('¿Está seguro de querer borrar el elemento?') == true) {
+    if (confirm('¿Está seguro de querer borrar el elemento?') === true) {
       this.employeeService.deleteEmployee(key);
       this.tostr.warning('Borrado exitoso', 'Registro de Instructor');
     }

@@ -1,14 +1,21 @@
-<h6 class="text-center">Registro de alumno</h6>
-<br>
+<hr>
+<div class="form-row">
+  <h3 class="col-md-4">Busqueda de Instructor</h3>
+  <div class="col-md-4 mb-3">
+    <input type="text" #searchInput (keyup)="search(searchInput.value)" placeholder="Buscar instructor..." class="form-control">
+  </div>
+</div>
+
+
 <div class="row">
   <div class="col-md"><h6>Nombre</h6></div>
   <div class="col-md"><h6>Fecha</h6></div>
-  <div class="col-md"><h6>Tutor</h6></div>
+  <div class="col-md-3"><h6>Tutor</h6></div>
   <div class="col-md"><h6>Teléfono</h6></div>
 </div>
 <br/>
 <table class="table table-sm table-hover">
-  <tr *ngFor="let alumno of alumnoLista; index as i">
+  <tr *ngFor="let alumno of alumnos$ | async; index as i">
     <td>{{ i + 1 }}. {{alumno.nombre}}</td>
     <td>{{alumno.fecha}}</td>
     <td>{{alumno.nombre_tutor}}</td>
@@ -17,9 +24,15 @@
       <a class="btn" (click)="onEdit(alumno)">
         <i class="fa fa-pencil-square-o"></i>
       </a>
-      <a class="btn" (click)="onDelete(alumno.$key)">
+      <a class="btn" (click)="onDelete(alumno.key)">
         <i class="fa fa-trash-o"></i>
       </a>
     </td>
   </tr>
+  <div *ngIf="(alumnos$ | async)?.length < 1">
+    <hr>
+    <p>
+      No se encontraron resultados...
+    </p>
+  </div>
 </table>

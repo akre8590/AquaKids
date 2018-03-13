@@ -1,5 +1,5 @@
 <form #alumnoForm="ngForm" (ngSubmit)="onSubmit(alumnoForm)">
-  <input type="hidden" name="$key" #$key="ngModel" [(ngModel)]="alumnoService.selectedAlumno.$key">
+  <input type="hidden" name="$key" #$key="ngModel" [(ngModel)]="alumnoService.selectedAlumno.key">
 
 <div class="form-row">
 
