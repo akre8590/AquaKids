@@ -1,5 +1,6 @@
 <form #grupoForm="ngForm" (ngSubmit)="onSubmit(grupoForm)">
   <input type="hidden" name="$key" #$key="ngModel" [(ngModel)]="grupoService.selectedGrupo.$key">
+<div class="form-row">
   <div class="form-group">
     <label>Tipo de Grupo</label>
     <input class="form-control" name="tipo_grupo" #tipo_grupo="ngModel" [(ngModel)]="grupoService.selectedGrupo.tipo_grupo" placeholder="Tipo de Grupo" required>
@@ -34,4 +35,5 @@
       <i class="fa fa-repeat"></i>
       Reset</button>
   </div>
+</div>
 </form>

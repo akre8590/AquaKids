@@ -11,10 +11,13 @@
         <a class="nav-link" [routerLink]="['alumnos']">Control de Alumnos</a>
       </li>
       <li class="nav-item" routerLinkActive="active" *ngIf="isLogin">
-        <a class="nav-link" [routerLink]="['empleados']">Gestión de Instructores</a>
+        <a class="nav-link" [routerLink]="['pagos']">Gestión de Cuotas</a>
       </li>
       <li class="nav-item" routerLinkActive="active" *ngIf="isAdmin">
         <a class="nav-link" [routerLink]="['grupos']">Gestión de Grupos</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active" *ngIf="isLogin">
+        <a class="nav-link" [routerLink]="['empleados']">Gestión de Instructores</a>
       </li>
       <li class="nav-item" routerLinkActive="active" *ngIf="isAdmin">
         <a class="nav-link" [routerLink]="['registro']">Registro de usuarios</a>

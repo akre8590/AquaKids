@@ -36,6 +36,9 @@ import { RegisterComponent } from './register/register.component';
 import { GruposComponent } from './grupos/grupos.component';
 import { GrupoComponent } from './grupos/grupo/grupo.component';
 import { GruposListComponent } from './grupos/grupos-list/grupos-list.component';
+import { PagosComponent } from './pagos/pagos.component';
+import { PagoComponent } from './pagos/pago/pago.component';
+import { PagosListComponent } from './pagos/pagos-list/pagos-list.component';
 
 
 @NgModule({
@@ -55,7 +58,10 @@ import { GruposListComponent } from './grupos/grupos-list/grupos-list.component'
     RegisterComponent,
     GruposComponent,
     GrupoComponent,
-    GruposListComponent
+    GruposListComponent,
+    PagosComponent,
+    PagoComponent,
+    PagosListComponent,
   ],
   imports: [
     BrowserModule,
