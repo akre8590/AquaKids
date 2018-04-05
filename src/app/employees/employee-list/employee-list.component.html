@@ -1,8 +1,8 @@
 <hr>
 <div class="form-row">
-    <h3 class="col-md-4">Busqueda de Alumnos</h3>
+    <h3 class="col-md-4">Busqueda de Instructores</h3>
     <div class="col-md-4 mb-3">
-        <input type="text" #searchInput (keyup)="search(searchInput.value)" placeholder="Buscar alumno..." class="form-control">
+        <input type="text" #searchInput (keyup)="search(searchInput.value)" placeholder="Buscar insructor..." class="form-control">
     </div>
 </div>
 
@@ -14,10 +14,10 @@
 </div>
 <br/>
 <table class="table table-sm table-hover">
-  <tr *ngFor="let employee of employees$ | async; index as i">
-      <td>{{ i + 1 }}. {{employee.name}}</td>
-      <td>{{employee.address}}</td>
-      <td>{{employee.tel}}</td>
+  <tr *ngFor="let employee of employees$ | async  index as i">
+      <td>{{ i + 1 }}. {{employee.name|uppercase}}</td>
+      <td>{{employee.address|uppercase}}</td>
+      <td>{{employee.tel |uppercase}}</td>
 
       <td>
         <a class="btn" (click)="onEdit(employee)">
