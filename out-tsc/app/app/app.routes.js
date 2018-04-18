@@ -7,7 +7,6 @@ import { LoginComponent } from './login/login.component';
 import { GruposComponent } from './grupos/grupos.component';
 //guard
 import { LoginGuard } from './shared/guard/login.guard';
-import { PagosComponent } from './pagos/pagos.component';
 var APP_ROUTES = [
     { path: 'home', component: HomeComponent, canActivate: [LoginGuard] },
     { path: 'empleados', component: EmployeesComponent, canActivate: [LoginGuard] },
@@ -15,7 +14,6 @@ var APP_ROUTES = [
     { path: 'registro', component: RegisterComponent, canActivate: [LoginGuard] },
     { path: 'login', component: LoginComponent },
     { path: 'grupos', component: GruposComponent, canActivate: [LoginGuard] },
-    { path: 'pagos', component: PagosComponent, canActivate: [LoginGuard] },
     { path: '**', pathMatch: 'full', redirectTo: 'login' }
 ];
 export var APP_ROUTING = RouterModule.forRoot(APP_ROUTES);

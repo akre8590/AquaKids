@@ -9,7 +9,7 @@ import { GruposComponent } from './grupos/grupos.component';
 import {LoginGuard} from './shared/guard/login.guard';
 import {NoLoginGuard} from './shared/guard/no-login.guard';
 import {UserGuard} from './shared/guard/user.guard';
-import { PagosComponent } from './pagos/pagos.component';
+
 
 
 const APP_ROUTES: Routes = [
@@ -19,7 +19,7 @@ const APP_ROUTES: Routes = [
     { path: 'registro', component: RegisterComponent, canActivate: [LoginGuard]},
     { path: 'login', component: LoginComponent},
     { path: 'grupos', component: GruposComponent, canActivate: [LoginGuard]},
-    { path: 'pagos', component: PagosComponent, canActivate: [LoginGuard]},
+
     { path: '**', pathMatch: 'full', redirectTo: 'login'}
 ];
 
