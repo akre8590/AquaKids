@@ -9,7 +9,8 @@ import { GruposComponent } from './grupos/grupos.component';
 import {LoginGuard} from './shared/guard/login.guard';
 import {NoLoginGuard} from './shared/guard/no-login.guard';
 import {UserGuard} from './shared/guard/user.guard';
-import {PagosComponent} from "./pagos/pagos.component";
+import { PagosComponent } from './pagos/pagos.component';
+
 
 const APP_ROUTES: Routes = [
     { path: 'home', component: HomeComponent, canActivate: [LoginGuard]},

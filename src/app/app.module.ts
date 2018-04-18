@@ -41,6 +41,7 @@ import { PagoComponent } from './pagos/pago/pago.component';
 import { PagosListComponent } from './pagos/pagos-list/pagos-list.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -59,9 +60,10 @@ import { PagosListComponent } from './pagos/pagos-list/pagos-list.component';
     GruposComponent,
     GrupoComponent,
     GruposListComponent,
-    PagosComponent,
-    PagoComponent,
-    PagosListComponent,
+      PagosComponent,
+      PagoComponent,
+      PagosListComponent,
+
   ],
   imports: [
     BrowserModule,
